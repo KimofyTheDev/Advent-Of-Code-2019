@@ -1,22 +1,27 @@
-import java.util.*;
 import java.io.*;
 
-class Day1 {
-  public static void main(String[] args) throws IOException{
-    Scanner scanner = new Scanner(new File("input/day1.txt"));
-    
-    int [] data = new int [100];
-    int[] result = new int [100];
-    int i = 0;
-
-    while(scanner.hasNextInt()){
-      data[i++] = scanner.nextInt();
-    }
-    int sum=0;
-    for (int j=0;j<100;j++){
-      result[j] = (data[j]/3)-2;
-      sum +=result[j];
-    }
-    System.out.println("Part 1: " + sum);
-  }
+public class main {
+	public static void main(String[] args) {
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader("input/day1.txt"));
+			String line = "";
+			Double totalFuelI = 0D;
+			Double totalFuelII = 0D;
+			while (line != null) {
+				line = reader.readLine();
+				if (line != null) {
+					Double moduleFuel = Double.parseDouble(line);
+					totalFuelI += Math.floor(moduleFuel / 3) - 2;
+					while ((Math.floor(moduleFuel / 3) - 2) > 0) {
+						moduleFuel = Math.floor(moduleFuel / 3) - 2;
+						totalFuelII += moduleFuel;
+					}
+				}
+			}
+			System.out.println("Part I: " + totalFuelI);
+			System.out.println("Part II: " + totalFuelII);
+		} catch (IOException exception) {
+			exception.printStackTrace();
+		}
+	}
 }

@@ -19,7 +19,6 @@ class Selection {
           sb.append((char)i);
 
         System.out.println(sb.toString());
-
       default:
 
     }
