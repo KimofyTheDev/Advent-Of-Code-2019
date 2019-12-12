@@ -18,7 +18,12 @@
 		<link>
 			<name>src/Day1.java</name>
 			<type>1</type>
-			<location>//home/runner/src/Day1/Day1.java</location>
+			<location>//home/runner/src/Day1.java</location>
+		</link>
+		<link>
+			<name>src/Day2.java</name>
+			<type>1</type>
+			<location>//home/runner/src/Day2.java</location>
 		</link>
 		<link>
 			<name>src/Selection.java</name>

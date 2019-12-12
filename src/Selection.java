@@ -10,7 +10,7 @@ class Selection {
 
     switch(input) {
       case 1:
-        Process p = Runtime.getRuntime().exec("java src/Day1/Day1.java");
+        Process p = Runtime.getRuntime().exec("java src/Day1.java");
 
         InputStream is = p.getInputStream();
         int i = 0;
@@ -19,6 +19,16 @@ class Selection {
           sb.append((char)i);
 
         System.out.println(sb.toString());
+      case 2:
+        Process p1 = Runtime.getRuntime().exec("java src/Day2.java");
+
+        InputStream is1 = p1.getInputStream();
+        int i1 = 0;
+        StringBuffer sb1 = new StringBuffer();
+        while ( (i = is1.read()) != -1)
+          sb1.append((char)i);
+
+        System.out.println(sb1.toString());
       default:
 
     }
